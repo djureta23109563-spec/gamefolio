@@ -1,0 +1,269 @@
+# ====================
+# Node.js / JavaScript
+# ====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ====================
+# Environment Variables (IMPORTANT - Never commit these!)
+# ====================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+frontend/.env
+*.env
+
+# ====================
+# Backend Specific
+# ====================
+backend/node_modules/
+backend/uploads/
+backend/seedAdmin.js
+backend/*.log
+
+# ====================
+# Frontend Specific
+# ====================
+frontend/node_modules/
+frontend/build/
+frontend/.cache/
+frontend/coverage/
+frontend/*.log
+
+# ====================
+# Production Builds
+# ====================
+/dist
+/build
+/out
+
+# ====================
+# IDE / Editor Files
+# ====================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+. DS_Store
+.project
+.classpath
+.settings/
+
+# ====================
+# OS Generated Files
+# ====================
+Thumbs.db
+Desktop.ini
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*.db
+
+# ====================
+# Logs
+# ====================
+logs/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# ====================
+# Cache Files
+# ====================
+.cache/
+.parcel-cache/
+.eslintcache
+*.tsbuildinfo
+
+# ====================
+# Testing
+# ====================
+/coverage
+.nyc_output
+*.test.js
+*.spec.js
+
+# ====================
+# Misc
+# ====================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ====================
+# Docker (if using)
+# ====================
+docker-compose.override.yml
+*.dockerignore
+
+# ====================
+# Secret / Sensitive Files
+# ====================
+*.pem
+*.key
+*.crt
+*.cert
+secrets/
+private/
+
+# ====================
+# Temporary Files
+# ====================
+tmp/
+temp/
+*.temp
+*.tmp
+
+# ====================
+# Database files (if local)
+# ====================
+*.sqlite
+*.db
+*.mongodb
+
+# ====================
+# Uploads (user uploaded files)
+# ====================
+uploads/
+backend/uploads/
+frontend/public/uploads/
+
+# ====================
+# Debug files
+# ====================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ====================
+# Runtime data
+# ====================
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ====================
+# Coverage directory used by tools like istanbul
+# ====================
+coverage/
+*.lcov
+
+# ====================
+# Dependency directories
+# ====================
+jspm_packages/
+
+# ====================
+# TypeScript cache
+# ====================
+*.tsbuildinfo
+
+# ====================
+# Optional npm cache directory
+# ====================
+.npm
+
+# ====================
+# Optional eslint cache
+# ====================
+.eslintcache
+
+# ====================
+# Optional REPL history
+# ====================
+.node_repl_history
+
+# ====================
+# Output of 'npm pack'
+# ====================
+*.tgz
+
+# ====================
+# Yarn Integrity file
+# ====================
+.yarn-integrity
+
+# ====================
+# dotenv environment variables file
+# ====================
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# ====================
+# parcel-bundler cache (https://parceljs.org/)
+# ====================
+.cache
+.parcel-cache
+
+# ====================
+# next.js build output
+# ====================
+.next
+out
+
+# ====================
+# nuxt.js build output
+# ====================
+.nuxt
+dist
+
+# ====================
+# vuepress build output
+# ====================
+.vuepress/dist
+
+# ====================
+# Serverless directories
+# ====================
+.serverless/
+
+# ====================
+# FuseBox cache
+# ====================
+.fusebox/
+
+# ====================
+# DynamoDB Local files
+# ====================
+.dynamodb/
+
+# ====================
+# TernJS port file
+# ====================
+.tern-port
+
+# ====================
+# Stores VSCode versions used for testing
+# ====================
+.vscode-test
+
+# ====================
+# yarn v2
+# ====================
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
