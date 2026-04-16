@@ -49,11 +49,12 @@
   color: #555;
 }
 
+/* Login Button Styles */
 .loginBtn {
   background: teal;
   color: black;
   border: none;
-  padding: 12px 24px;
+  padding: 14px 24px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
@@ -67,6 +68,10 @@
   background: #00cccc;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
+}
+
+.loginBtn:active {
+  transform: translateY(0);
 }
 
 .errorMsg {
@@ -206,5 +211,9 @@
     right: 8px;
     font-size: 1rem;
     padding: 5px;
+  }
+  
+  .loginBtn {
+    padding: 12px 20px;
   }
 }
