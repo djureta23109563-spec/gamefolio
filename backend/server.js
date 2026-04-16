@@ -13,12 +13,12 @@ const adminRoutes = require('./routes/admin.routes');
 
 const app = express();
 
-// Connect to MongoDB directly
+// Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.error('DB Connection Error:', err));
 
-// CORS - Allow all origins for development
+// CORS
 app.use(cors({ 
     origin: true,
     credentials: true,
@@ -35,7 +35,35 @@ app.use('/api/posts', postRoutes);
 app.use('/api/comments', commentRoutes);
 app.use('/api/admin', adminRoutes);
 
-// Start Server - Changed to 5001
+// Health check endpoint - ADD THIS
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'OK', message: 'Server is running' });
+});
+
+// Auto-create admin account - ADD THIS
+const createAdminIfNotExists = async () => {
+    try {
+        const User = require('./models/User');
+        const adminExists = await User.findOne({ email: 'admin@thefolio.com' });
+        if (!adminExists) {
+            await User.create({
+                name: 'Admin User',
+                email: 'admin@thefolio.com',
+                password: 'Admin@1234',
+                role: 'admin',
+                status: 'active'
+            });
+            console.log('✅ Admin account created: admin@thefolio.com / Admin@1234');
+        } else {
+            console.log('✅ Admin account already exists');
+        }
+    } catch (error) {
+        console.log('Admin check failed:', error.message);
+    }
+};
+createAdminIfNotExists();
+
+// Start Server
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
