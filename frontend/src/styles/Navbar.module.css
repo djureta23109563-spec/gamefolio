@@ -1,0 +1,279 @@
+/* Full Width Navbar */
+.navbar {
+  background: #000;
+  border-bottom: 2px solid teal;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.navContainer {
+  width: 100%;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.navBrand {
+  flex-shrink: 0;
+}
+
+.navBrand a {
+  color: teal;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.navBrand a:hover {
+  text-shadow: 0 0 10px teal;
+}
+
+.navLinks {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.navLinks a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: teal;
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after,
+.active::after {
+  width: 100%;
+}
+
+.navLinks a:hover {
+  color: teal;
+}
+
+.active {
+  color: teal;
+}
+
+/* Logout Button */
+.logoutBtn {
+  background: teal;
+  color: black;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.logoutBtn:hover {
+  background: #009999;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
+}
+
+/* Theme Toggle Button */
+.themeToggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: teal;
+  color: black;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.themeIcon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.themeToggleBtn:hover .themeIcon {
+  transform: rotate(360deg) scale(1.2);
+}
+
+.themeToggleBtn:hover {
+  transform: scale(1.05);
+  gap: 12px;
+  box-shadow: 0 0 15px rgba(0, 128, 128, 0.5);
+}
+
+/* Profile Picture - Rightmost */
+.profileLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.profileAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid teal;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.profileAvatar:hover {
+  transform: scale(1.1);
+  border-color: #00cccc;
+  box-shadow: 0 0 10px rgba(0, 128, 128, 0.5);
+}
+
+.profileInitials {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, teal, #00cccc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+  border: 2px solid teal;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.profileInitials:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 128, 128, 0.5);
+}
+
+/* Mobile Menu Button */
+.mobileMenuBtn {
+  display: none;
+  background: teal;
+  color: black;
+  border: none;
+  font-size: 1.5rem;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.mobileMenuBtn:hover {
+  background: #009999;
+}
+
+/* Scroll Effect */
+.scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Light Mode */
+:global(body.light-mode) .navbar {
+  background: #f0f0f0;
+  border-bottom-color: teal;
+}
+
+:global(body.light-mode) .navLinks a {
+  color: #111;
+}
+
+:global(body.light-mode) .navLinks a:hover,
+:global(body.light-mode) .active {
+  color: teal;
+}
+
+:global(body.light-mode) .logoutBtn,
+:global(body.light-mode) .themeToggleBtn {
+  background: teal;
+  color: black;
+}
+
+:global(body.light-mode) .scrolled {
+  background: rgba(240, 240, 240, 0.95);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .mobileMenuBtn {
+    display: block;
+  }
+  
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #000;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    border-bottom: 2px solid teal;
+    margin-left: 0;
+  }
+  
+  .navLinksActive {
+    display: flex;
+  }
+  
+  .navLinks a,
+  .navLinks button {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    justify-content: center;
+  }
+  
+  .profileLink {
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  .profileAvatar,
+  .profileInitials {
+    width: 35px;
+    height: 35px;
+  }
+  
+  :global(body.light-mode) .navLinks {
+    background: #f0f0f0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .navLinks {
+    display: flex !important;
+  }
+}

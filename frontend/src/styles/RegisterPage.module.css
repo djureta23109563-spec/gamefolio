@@ -1,0 +1,483 @@
+.registerPage {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(28, 28, 28, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  border: 1px solid rgba(0, 128, 128, 0.3);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(0, 128, 128, 0.15), rgba(0, 128, 128, 0.05));
+  border-bottom: 1px solid rgba(0, 128, 128, 0.2);
+}
+
+.header h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+.header h2 span {
+  color: teal;
+  background: linear-gradient(135deg, teal, #00cccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header p {
+  color: #aaa;
+  margin-top: 8px;
+}
+
+.gameEmoji {
+  font-size: 2rem;
+  margin-top: 15px;
+  letter-spacing: 8px;
+}
+
+.formContainer {
+  padding: 30px;
+}
+
+.errorMsg {
+  background: rgba(255, 68, 68, 0.2);
+  color: #ff6666;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 3px solid #ff4444;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 15px;
+  font-size: 1.2rem;
+  color: teal;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 15px 14px 45px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 128, 128, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: teal;
+  box-shadow: 0 0 8px rgba(0, 128, 128, 0.3);
+}
+
+.dateInput {
+  padding: 14px 15px 14px 45px;
+}
+
+/* Password Strength */
+.passwordStrength {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: -8px;
+}
+
+.strengthBar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.strengthFill {
+  height: 100%;
+  width: 0%;
+  transition: all 0.3s ease;
+}
+
+.strengthFill.weak {
+  width: 33%;
+  background: #ff4444;
+}
+
+.strengthFill.medium {
+  width: 66%;
+  background: #ffaa00;
+}
+
+.strengthFill.strong {
+  width: 100%;
+  background: #00cc66;
+}
+
+.strengthText {
+  font-size: 0.7rem;
+  color: #888;
+  min-width: 45px;
+}
+
+/* Password Requirements */
+.passwordRequirements {
+  list-style: none;
+  padding-left: 0;
+  margin: 5px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.passwordRequirements li {
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.passwordRequirements .valid {
+  color: #00cc66;
+}
+
+.passwordRequirements .invalid {
+  color: #888;
+}
+
+.requirementIcon {
+  font-size: 0.7rem;
+}
+
+/* Skill Section */
+.skillSection {
+  margin-top: 10px;
+}
+
+.skillLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: teal;
+  font-weight: bold;
+}
+
+.skillIcon {
+  font-size: 1.1rem;
+}
+
+.skillOptions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.skillOption {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 128, 128, 0.3);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skillOption:hover {
+  border-color: teal;
+  background: rgba(0, 128, 128, 0.1);
+}
+
+.skillOption.selected {
+  border-color: teal;
+  background: rgba(0, 128, 128, 0.2);
+  box-shadow: 0 0 10px rgba(0, 128, 128, 0.3);
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioEmoji {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.radioLabel {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.radioDesc {
+  display: block;
+  font-size: 0.65rem;
+  color: #888;
+}
+
+/* Policy Checkbox */
+.policyCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(0, 128, 128, 0.05);
+}
+
+.checkboxInput {
+  display: none;
+}
+
+.checkboxEmoji {
+  font-size: 1.2rem;
+}
+
+.checkboxText {
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+.policyLink {
+  color: teal;
+  text-decoration: none;
+}
+
+.policyLink:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.button {
+  background: teal;
+  color: black;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.button:hover:not(:disabled) {
+  background: #00cccc;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 128, 128, 0.3);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttonIcon {
+  font-size: 1.1rem;
+}
+
+/* Spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-top: 2px solid black;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Login Text */
+.loginText {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 128, 128, 0.2);
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.loginText a {
+  color: teal;
+  text-decoration: none;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.loginText a:hover {
+  text-decoration: underline;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: rgba(28, 28, 28, 0.8);
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 128, 128, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.feature span {
+  font-size: 1.1rem;
+}
+
+/* Light Mode */
+:global(body.light-mode) .registerPage {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+:global(body.light-mode) .card {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+:global(body.light-mode) .header h2 {
+  color: #111;
+}
+
+:global(body.light-mode) .input {
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+}
+
+:global(body.light-mode) .skillOption {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+:global(body.light-mode) .skillOption.selected {
+  background: rgba(0, 128, 128, 0.15);
+}
+
+:global(body.light-mode) .radioLabel {
+  color: #111;
+}
+
+:global(body.light-mode) .feature {
+  background: rgba(255, 255, 255, 0.9);
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .registerPage {
+    padding: 20px 15px;
+  }
+  
+  .header {
+    padding: 20px;
+  }
+  
+  .header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .formContainer {
+    padding: 20px;
+  }
+  
+  .skillOptions {
+    flex-direction: column;
+  }
+  
+  .features {
+    gap: 15px;
+  }
+  
+  .feature {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+/* Password wrapper for register page */
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.passwordInput {
+  padding-right: 45px !important;
+}
+
+.eyeButton {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.eyeButton:hover {
+  background: rgba(0, 128, 128, 0.1);
+  transform: scale(1.1);
+}
+
+/* Light mode */
+:global(body.light-mode) .eyeButton {
+  color: #555;
+}
+
+:global(body.light-mode) .eyeButton:hover {
+  background: rgba(0, 128, 128, 0.15);
+}

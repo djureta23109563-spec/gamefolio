@@ -1,0 +1,313 @@
+/* ContactPage.module.css */
+
+.contactPage {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Hero Section */
+.heroSection {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, rgba(0, 128, 128, 0.1), rgba(0, 128, 128, 0.05));
+  border-radius: 20px;
+  border: 1px solid rgba(0, 128, 128, 0.2);
+}
+
+.heroSection h1 {
+  font-size: 2.5rem;
+  color: teal;
+  margin-bottom: 15px;
+}
+
+.heroSection p {
+  color: #aaa;
+  font-size: 1.1rem;
+}
+
+/* Contact Form Section */
+.contactSection {
+  background: rgba(28, 28, 28, 0.6);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 50px;
+  border: 1px solid rgba(0, 128, 128, 0.2);
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.formHeader h2 {
+  color: teal;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.formHeader p {
+  color: #aaa;
+}
+
+.contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: teal;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 128, 128, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1rem;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: teal;
+}
+
+.submitBtn {
+  width: 100%;
+  background: teal;
+  color: black;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: #00cccc;
+  transform: translateY(-2px);
+}
+
+.successMessage {
+  text-align: center;
+  padding: 40px;
+  background: rgba(0, 128, 128, 0.1);
+  border-radius: 12px;
+}
+
+.successIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.successMessage p {
+  color: teal;
+  margin-bottom: 10px;
+}
+
+/* Map Section - Small Image with Border */
+.mapSection {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.mapTitle {
+  text-align: center;
+  color: teal;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+.mapContainer {
+  display: inline-block;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 16px;
+  border: 3px solid teal;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.mapContainer:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 128, 128, 0.3);
+}
+
+.mapImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mapOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  padding: 20px;
+}
+
+.locationsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.locationsList span {
+  background: rgba(0, 128, 128, 0.8);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: black;
+  font-weight: bold;
+}
+
+/* Locations Grid */
+.locationsGrid {
+  margin-bottom: 50px;
+}
+
+.locationsGrid h2 {
+  text-align: center;
+  color: teal;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.locationCard {
+  background: rgba(28, 28, 28, 0.8);
+  border-radius: 16px;
+  padding: 25px;
+  border: 1px solid rgba(0, 128, 128, 0.2);
+  transition: all 0.3s ease;
+}
+
+.locationCard:hover {
+  transform: translateY(-5px);
+  border-color: teal;
+  box-shadow: 0 10px 25px rgba(0, 128, 128, 0.2);
+}
+
+.locationIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.locationCard h3 {
+  color: teal;
+  margin-bottom: 12px;
+}
+
+.locationCard p {
+  color: #bbb;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(0, 128, 128, 0.2);
+  color: teal;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-right: 8px;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid rgba(0, 128, 128, 0.2);
+  color: #888;
+}
+
+.footer p {
+  margin-bottom: 8px;
+}
+
+/* Light Mode */
+:global(body.light-mode) .contactPage {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+:global(body.light-mode) .contactSection,
+:global(body.light-mode) .locationCard {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+:global(body.light-mode) .locationCard p {
+  color: #555;
+}
+
+:global(body.light-mode) .formGroup input,
+:global(body.light-mode) .formGroup textarea {
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+  
+  .heroSection h1 {
+    font-size: 1.8rem;
+  }
+  
+  .contactSection {
+    padding: 25px;
+  }
+  
+  .formHeader h2 {
+    font-size: 1.4rem;
+  }
+  
+  .mapContainer {
+    max-width: 100%;
+  }
+  
+  .locationsList span {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+  
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+}

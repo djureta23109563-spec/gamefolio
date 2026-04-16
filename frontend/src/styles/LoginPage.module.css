@@ -1,0 +1,210 @@
+/* LoginPage.module.css */
+
+.container {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 40px;
+  background: #1c1c1c;
+  border-radius: 16px;
+  border: 1px solid teal;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.container h2 {
+  color: teal;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: teal;
+}
+
+.container input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid teal;
+  background: #111;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.container input:focus {
+  outline: none;
+  border-color: #00cccc;
+  box-shadow: 0 0 8px rgba(0, 128, 128, 0.3);
+}
+
+.container input::placeholder {
+  color: #555;
+}
+
+.loginBtn {
+  background: teal;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.loginBtn:hover {
+  background: #00cccc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
+}
+
+.errorMsg {
+  background: rgba(255, 68, 68, 0.2);
+  color: #ff6666;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-left: 3px solid #ff4444;
+}
+
+.registerLink {
+  text-align: center;
+  margin-top: 20px;
+  color: #aaa;
+}
+
+.container a {
+  color: teal;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+/* Password field with eye button */
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.passwordInput {
+  width: 100%;
+  padding: 12px 45px 12px 15px !important;
+}
+
+.eyeButton {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyeButton:hover {
+  background: rgba(0, 128, 128, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* ============ LIGHT MODE STYLES ============ */
+:global(body.light-mode) .container {
+  background: #ffffff;
+  border-color: teal;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+:global(body.light-mode) .container h2 {
+  color: teal;
+}
+
+:global(body.light-mode) .container label {
+  color: teal;
+}
+
+:global(body.light-mode) .container input {
+  background: #f5f5f5;
+  color: #111;
+  border-color: #ccc;
+}
+
+:global(body.light-mode) .container input:focus {
+  border-color: teal;
+  box-shadow: 0 0 8px rgba(0, 128, 128, 0.2);
+}
+
+:global(body.light-mode) .loginBtn {
+  background: teal;
+  color: white;
+}
+
+:global(body.light-mode) .loginBtn:hover {
+  background: #008080;
+}
+
+:global(body.light-mode) .errorMsg {
+  background: #ffe0e0;
+  color: #d32f2f;
+  border-left-color: #d32f2f;
+}
+
+:global(body.light-mode) .registerLink {
+  color: #555;
+}
+
+:global(body.light-mode) .container a {
+  color: teal;
+}
+
+:global(body.light-mode) .eyeButton {
+  color: #555;
+}
+
+:global(body.light-mode) .eyeButton:hover {
+  background: rgba(0, 128, 128, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    margin: 40px 20px;
+    padding: 25px;
+  }
+  
+  .container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .passwordInput {
+    padding: 10px 40px 10px 12px !important;
+  }
+  
+  .eyeButton {
+    right: 8px;
+    font-size: 1rem;
+    padding: 5px;
+  }
+}

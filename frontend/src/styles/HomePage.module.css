@@ -1,0 +1,247 @@
+/* HomePage.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #003333, #006666);
+  border-radius: 12px;
+  margin: 50px 0;
+  border: 2px solid teal;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.hero p {
+  color: #ddd;
+  font-size: 1.1rem;
+}
+
+/* Features Section */
+.features {
+  margin: 50px 0;
+}
+
+.features h3 {
+  text-align: center;
+  color: teal;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Posts Grid */
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.postCard {
+  background: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid teal;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+}
+
+.postCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 128, 128, 0.3);
+}
+
+.postCardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.postCard h3 {
+  color: teal;
+  margin: 15px 0 10px;
+  font-size: 1.3rem;
+}
+
+.postExcerpt {
+  color: #aaa;
+  line-height: 1.5;
+}
+
+.postMeta {
+  padding: 10px 0;
+  font-size: 0.85rem;
+  color: teal;
+}
+
+.postCard a {
+  display: inline-block;
+  color: teal;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.postCard a:hover {
+  color: #00cccc;
+}
+
+/* Previews */
+.previews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 50px 0;
+}
+
+.previewBox {
+  background: #1c1c1c;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid teal;
+  transition: transform 0.3s ease;
+}
+
+.previewBox:hover {
+  transform: translateY(-5px);
+}
+
+.previewBox h3 {
+  color: teal;
+  margin-bottom: 15px;
+}
+
+.previewBox p {
+  color: #bbb;
+}
+
+/* Footer */
+.footer {
+  margin-top: 80px;
+  background: #000;
+  text-align: center;
+  padding: 25px;
+  color: #888;
+}
+
+.footer p {
+  margin-bottom: 8px;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: teal;
+}
+
+/* No Posts */
+.noPosts {
+  text-align: center;
+  padding: 40px;
+  background: #1c1c1c;
+  border-radius: 12px;
+  color: #aaa;
+}
+
+/* ============ LIGHT MODE STYLES ============ */
+:global(body.light-mode) .hero {
+  background: linear-gradient(180deg, #d4f0f0, #a8d4d4);
+  border-color: teal;
+}
+
+:global(body.light-mode) .hero h2 {
+  color: #111;
+}
+
+:global(body.light-mode) .hero p {
+  color: #333;
+}
+
+:global(body.light-mode) .features h3 {
+  color: teal;
+}
+
+:global(body.light-mode) .postCard {
+  background: #ffffff;
+  border-color: teal;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+:global(body.light-mode) .postCard h3 {
+  color: teal;
+}
+
+:global(body.light-mode) .postExcerpt {
+  color: #444;
+}
+
+:global(body.light-mode) .postMeta {
+  color: teal;
+}
+
+:global(body.light-mode) .postCard a {
+  color: teal;
+}
+
+:global(body.light-mode) .postCard a:hover {
+  color: #008080;
+}
+
+:global(body.light-mode) .previewBox {
+  background: #ffffff;
+  border-color: teal;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+:global(body.light-mode) .previewBox h3 {
+  color: teal;
+}
+
+:global(body.light-mode) .previewBox p {
+  color: #555;
+}
+
+:global(body.light-mode) .footer {
+  background: #e0e0e0;
+  color: #333;
+  border-top: 1px solid teal;
+}
+
+:global(body.light-mode) .noPosts {
+  background: #f0f0f0;
+  color: #555;
+}
+
+:global(body.light-mode) .loading {
+  color: teal;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  
+  .postsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .previews {
+    grid-template-columns: 1fr;
+  }
+}
