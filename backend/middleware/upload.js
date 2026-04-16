@@ -17,7 +17,8 @@ const storage = multer.diskStorage({
     filename: (req, file, cb) => {
         const unique = Date.now() + '-' + Math.round(Math.random() * 1e9);
         const ext = path.extname(file.originalname).toLowerCase();
-        cb(null, unique + ext);
+        // Add 'profile-' prefix to easily identify profile pictures
+        cb(null, 'profile-' + unique + ext);
     },
 });
 
@@ -27,14 +28,16 @@ const fileFilter = (req, file, cb) => {
     const ext = allowedTypes.test(path.extname(file.originalname).toLowerCase());
     const mime = allowedTypes.test(file.mimetype);
     
-    if (ext && mime) return cb(null, true);
+    if (ext && mime) {
+        return cb(null, true);
+    }
     cb(new Error('Only image files are allowed (jpg, png, gif, webp)'));
 };
 
 const upload = multer({
     storage,
     fileFilter,
-    limits: { fileSize: 5 * 1024 * 1024 },
+    limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
 });
 
 // Error handling middleware for multer
